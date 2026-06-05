@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Portofolio | Fresh Graduate Software Engineering</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="#">&lt;FSG /&gt;</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Beranda</a></li>
+                <li><a href="#about" class="nav-link">Tentang</a></li>
+                <li><a href="#skills" class="nav-link">Keahlian</a></li>
+                <li><a href="#projects" class="nav-link">Proyek</a></li>
+                <li><a href="#contact" class="nav-link">Kontak</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+                <div class="toggle-ball"></div>
+            </div>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container hero-container">
+                <div class="avatar">
+                    <img src="garin.png" alt="Foto Profil">
+                </div>
+                <h1 class="hero-name">Garin Nur Falah</h1>
+                <p class="hero-title">Fresh Graduate Software Engineering</p>
+                <p class="hero-desc">Membangun solusi digital sambil belajar, berkembang, dan memberi dampak nyata.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">Lihat Proyek <i class="fas fa-arrow-down"></i></a>
+                    <a href="#" class="btn btn-outline">Download CV <i class="fas fa-file-pdf"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">Tentang Saya</h2>
+                <div class="about-content">
+                    <p>
+                        Halo! Saya <span class="highlight">Garin Nur Falah</span>, lulusan baru program studi Rekayasa Perangkat Lunak.
+                        Selama masa studi, saya terbiasa mempelajari berbagai teknologi dan menyelesaikan beragam proyek yang membantu
+                        mengembangkan kemampuan berpikir logis, pemecahan masalah, serta kerja sama tim. Saya memiliki semangat belajar yang tinggi,
+                        mudah beradaptasi dengan lingkungan baru, dan selalu tertarik untuk mengembangkan keterampilan di berbagai bidang.
+                    </p>
+
+                    <p>
+                        Saat ini saya terbuka terhadap berbagai peluang karier, baik yang berkaitan dengan teknologi maupun bidang lainnya.
+                        Saya memandang setiap pekerjaan sebagai kesempatan untuk menambah pengalaman, memperluas wawasan, dan meningkatkan kemampuan profesional.
+                        Dengan kemauan belajar yang kuat, disiplin, serta tanggung jawab dalam bekerja, saya siap memberikan kontribusi terbaik
+                        dan terus berkembang bersama perusahaan.
+                    </p>
+                    <div class="about-info">
+                        <div><i class="fas fa-map-marker-alt"></i> Cimahi Selatan, Indonesia</div>
+                        <div><i class="fas fa-graduation-cap"></i> SMK Teknologi Industri Pembangunan Cimahi</div>
+                        <div><i class="fas fa-laptop-code"></i> Fresh Graduate, siap berkembang</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+    <div class="container">
+        <h2 class="section-title">Keahlian & Tools</h2>
+        <div class="skills-grid">
+            <div class="skill-card"><i class="fab fa-html5"></i> HTML5</div>
+            <div class="skill-card"><i class="fab fa-css3-alt"></i> CSS3</div>
+            <div class="skill-card"><i class="fab fa-js"></i> JavaScript (Native)</div>
+            <div class="skill-card"><i class="fab fa-java"></i> Java</div>
+            <div class="skill-card"><i class="fas fa-mobile-alt"></i> Android Studio</div>
+            <div class="skill-card"><i class="fas fa-code"></i> XML Layout</div>
+            <div class="skill-card"><i class="fab fa-git-alt"></i> Git & GitHub</div>
+            <div class="skill-card"><i class="fas fa-plug"></i> REST API Integration</div>
+        </div>
+    </div>
+</section>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Proyek Unggulan</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-icon"><i class="fas fa-store"></i></div>
+                        <h3>EcoMarket - E-commerce</h3>
+                        <p>Platform belanja produk ramah lingkungan dengan fitur keranjang, autentikasi, dan payment gateway dummy. Dibangun dengan React, Context API, dan Firebase.</p>
+                        <div class="project-tech">React · Firebase · Tailwind</div>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> Repo</a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-icon"><i class="fas fa-cloud-sun"></i></div>
+                        <h3>WeaVue Dashboard</h3>
+                        <p>Aplikasi cuaca real-time dengan visualisasi data, mencari kota, dan menampilkan suhu, kelembaban, serta kondisi angin. Menggunakan OpenWeather API.</p>
+                        <div class="project-tech">JavaScript · API · Chart.js</div>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> Repo</a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-icon"><i class="fas fa-tasks"></i></div>
+                        <h3>FlowTask Manager</h3>
+                        <p>Aplikasi manajemen tugas kolaboratif dengan fitur drag & drop, deadline, dan notifikasi. Backend menggunakan Node.js, Express, dan MongoDB.</p>
+                        <div class="project-tech">MERN stack · Socket.io · JWT</div>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> Repo</a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Hubungi Saya</h2>
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <p>Saya sangat terbuka untuk diskusi, kolaborasi, atau sekadar ngobrol soal teknologi. Jangan ragu untuk menghubungi saya!</p>
+                        <div class="contact-details">
+                            <div><i class="fas fa-envelope"></i> garin.rpl.a@gmail.com</div>
+                            <div><i class="fas fa-phone-alt"></i> +62 895 3442 93020</div>
+                            <div><i class="fas fa-map-marker-alt"></i> Cimahi Selatan, Indonesia</div>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <input type="text" placeholder="Nama lengkap" required>
+                        <input type="email" placeholder="Alamat email" required>
+                        <textarea rows="4" placeholder="Tulis pesan Anda..."></textarea>
+                        <button type="submit" class="btn btn-primary">Kirim Pesan <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Garin Nur Falah | Fresh Graduate Software Engineering</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
