@@ -144,11 +144,14 @@
                         </div>
                     </div>
                     <form class="contact-form" id="contactForm">
-                        <input type="text" placeholder="Nama lengkap" required>
-                        <input type="email" placeholder="Alamat email" required>
-                        <textarea rows="4" placeholder="Tulis pesan Anda..."></textarea>
-                        <button type="submit" class="btn btn-primary">Kirim Pesan <i class="fas fa-paper-plane"></i></button>
-                    </form>
+    <input type="text" name="name" placeholder="Nama lengkap" required>
+    <input type="email" name="email" placeholder="Alamat email" required>
+    <textarea name="message" rows="4" placeholder="Tulis pesan Anda..." required></textarea>
+    <button type="submit" class="btn btn-primary">
+        Kirim Pesan <i class="fas fa-paper-plane"></i>
+    </button>
+    <div id="formStatus" style="margin-top: 1rem; font-size: 0.9rem;"></div>
+</form>
                 </div>
             </div>
         </section>
