@@ -3,20 +3,17 @@
 // ========================
 const themeToggle = document.querySelector('.theme-toggle');
 
-// Cek preferensi tersimpan
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'light') {
     document.body.classList.add('light-mode');
 } else if (savedTheme === 'dark') {
     document.body.classList.remove('light-mode');
 } else {
-    // Deteksi sistem
     if (window.matchMedia('(prefers-color-scheme: light)').matches) {
         document.body.classList.add('light-mode');
     }
 }
 
-// Event toggle
 if (themeToggle) {
     themeToggle.addEventListener('click', () => {
         document.body.classList.toggle('light-mode');
@@ -45,7 +42,6 @@ if (mobileMenuBtn) {
     });
 }
 
-// Tutup menu mobile ketika link diklik
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
         if (navLinks.classList.contains('active')) {
@@ -131,14 +127,54 @@ fadeElements.forEach(el => {
 });
 
 // ========================
-// 5. FORM SIMULASI
+// 5. FORM KIRIM KE EMAIL (FormSubmit)
 // ========================
 const contactForm = document.getElementById('contactForm');
+const formStatus = document.getElementById('formStatus');
+
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        alert('✨ Terima kasih! Pesan Anda telah terkirim (simulasi). Saya akan segera menghubungi Anda.');
-        contactForm.reset();
+
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.innerHTML;
+        
+        // Tampilkan loading
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Mengirim...';
+        formStatus.innerHTML = '';
+        
+        // Ganti dengan email tujuan Anda
+        const YOUR_EMAIL = 'garin.rpl.a@gmail.com';
+        
+        // Ambil data form
+        const formData = new FormData(contactForm);
+        formData.append('_captcha', 'false');  // Matikan captcha (opsional)
+        formData.append('_subject', 'Pesan Baru dari Portofolio');
+        
+        try {
+            const response = await fetch(`https://formsubmit.co/${YOUR_EMAIL}`, {
+                method: 'POST',
+                body: formData
+            });
+            
+            if (response.ok) {
+                formStatus.innerHTML = '<span style="color: #10b981;">✓ Pesan berhasil dikirim! Saya akan membalas segera.</span>';
+                contactForm.reset();
+            } else {
+                throw new Error('Gagal mengirim');
+            }
+        } catch (error) {
+            formStatus.innerHTML = '<span style="color: #ef4444;">✗ Gagal mengirim pesan. Silakan coba lagi nanti.</span>';
+            console.error(error);
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+            // Hilangkan status setelah 5 detik
+            setTimeout(() => {
+                if (formStatus.innerHTML) formStatus.innerHTML = '';
+            }, 5000);
+        }
     });
 }
 
@@ -162,4 +198,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-console.log("%c✨ Portofolio Fresh Graduate | Mode Gelap/Terang Siap!", "color: #3b82f6; font-size: 14px;");
+console.log("%c✨ Portofolio Fresh Graduate | Mode Gelap/Terang Siap! | Form terhubung ke email", "color: #3b82f6; font-size: 14px;");
